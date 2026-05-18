@@ -30,22 +30,22 @@ const handleKeyPress = (event) => {
   if (displaytxt === keypressed) {
     const newscore = score + 1;
     document.getElementById("score").innerText = newscore;
-    console.log(newscore);
     removekeybordcolor(displaytxt);
     showRandomAlphabet();
     return score;
   } else {
     const newLife = life - 1;
     document.getElementById("life").innerText = newLife;
-    console.log(life);
     if (newLife === 0) {
-      hideElement("playground");
-      showElement("playagain");
-      const removecustomeclass = document.getElementById("playagain");
-      removecustomeclass.classList.remove("custome-hidden");
-      const lastscore = document.getElementById("score").innerText;
-      const finalscore = document.getElementById("finalScore");
-      finalscore.innerText = lastscore;
+      // hideElement("playground");
+      // showElement("playagain");
+      // const removecustomeclass = document.getElementById("playagain");
+      // removecustomeclass.classList.remove("custome-hidden");
+      // const lastscore = document.getElementById("score").innerText;
+      // const finalscore = document.getElementById("finalScore");
+      // finalscore.innerText = lastscore;
+      // every thing just put in a function name gameOver in function.js file and call from there...
+      gameOver();
     }
     return life;
   }
@@ -70,4 +70,7 @@ const playAgain = () => {
   showElement("playground");
   document.getElementById("life").innerText = 5;
   document.getElementById("score").innerText = 0;
+};
+const exitGame = () => {
+  window.close();
 };

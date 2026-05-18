@@ -22,3 +22,13 @@ const removekeybordcolor = (elementId) => {
   const keybord = document.getElementById(elementId);
   keybord.classList.remove("bg-sky-500");
 };
+
+const gameOver = () => {
+  hideElement("playground");
+  showElement("playagain");
+  const removecustomeclass = document.getElementById("playagain");
+  removecustomeclass.classList.remove("custome-hidden");
+  const lastscore = document.getElementById("score").innerText;
+  const finalscore = document.getElementById("finalScore");
+  finalscore.innerText = lastscore;
+};
