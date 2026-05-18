@@ -72,5 +72,10 @@ const playAgain = () => {
   document.getElementById("score").innerText = 0;
 };
 const exitGame = () => {
-  window.close();
+  // window.close();
+  hideElement("playagain");
+  showElement("playnow");
+  removeAllkeysbgColor("kbd");
+  document.getElementById("life").innerText = 5;
+  document.getElementById("score").innerText = 0;
 };

@@ -23,6 +23,12 @@ const removekeybordcolor = (elementId) => {
   keybord.classList.remove("bg-sky-500");
 };
 
+const removeAllkeysbgColor = (elementclass) => {
+  const keys = document.getElementsByClassName(elementclass);
+  for (const key of keys) {
+    key.classList.remove("bg-sky-500");
+  }
+};
 const gameOver = () => {
   hideElement("playground");
   showElement("playagain");
