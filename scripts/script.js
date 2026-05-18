@@ -22,6 +22,9 @@
 // Another way to do this is:
 const handleKeyPress = (event) => {
   const keypressed = event.key;
+  if (keypressed === "Escape") {
+    gameOver();
+  }
   const displatxt = document.getElementById("txtpara");
   const displaytxt = displatxt.innerText.toLowerCase();
   const score = parseInt(document.getElementById("score").innerText);
